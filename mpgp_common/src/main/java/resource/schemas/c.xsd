@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb" targetNamespace="http://littlech.com/gen/c"
+	xmlns:c="http://littlech.com/gen/c" xmlns:seat="http://littlech.com/gen/f"
+	xmlns:action="http://littlech.com/gen/a" xmlns:card="http://littlech.com/gen/b"
+	xmlns:table="http://littlech.com/gen/g" jxb:version="2.0">
+	<xsd:import namespace="http://littlech.com/gen/f"
+		schemaLocation="f.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/a"
+		schemaLocation="a.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/b"
+		schemaLocation="b.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/g"
+		schemaLocation="g.xsd" />
+
+	<!-- ENUMERATIONS -->
+
+	<xsd:simpleType name="c1">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="c2" />
+			<xsd:enumeration value="c3" />
+			<xsd:enumeration value="c4" />
+			<xsd:enumeration value="c5" />
+			<xsd:enumeration value="c6" />
+			<xsd:enumeration value="c7" />
+			<xsd:enumeration value="c8" />
+			<xsd:enumeration value="c9" />
+			<xsd:enumeration value="c10" />
+			<xsd:enumeration value="c11" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- GENERAL COMMAND -->
+
+	<xsd:complexType name="c12" abstract="true">
+		<xsd:sequence>
+			<xsd:element name="c13" type="c:c1" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>

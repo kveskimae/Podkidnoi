@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	targetNamespace="http://littlech.com/gen/f"
+	xmlns:f="http://littlech.com/gen/f"
+	jxb:version="2.0">
+
+	<xsd:simpleType name="f1">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="f2" />
+			<xsd:enumeration value="f3" />
+			<xsd:enumeration value="f4" />
+			<xsd:enumeration value="f5" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="f6">
+		<xsd:all minOccurs="1" maxOccurs="1">
+			<xsd:element name="f7" type="xsd:string" />
+			<xsd:element name="f8" type="xsd:string" />
+		</xsd:all>
+	</xsd:complexType>
+	
+	<xsd:complexType name="f9" />
+
+	<xsd:complexType name="f10">
+		<xsd:complexContent>
+			<xsd:extension base="f:f9">
+				<xsd:all>
+					<xsd:element name="f11" type="f:f6"
+						nillable="false" />
+				</xsd:all>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="f12">
+		<xsd:complexContent>
+			<xsd:extension base="f:f9">
+				<xsd:all>
+					<xsd:element name="f13" type="f:f6"
+						nillable="true" />
+				</xsd:all>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="f14" abstract="true" />
+
+	<xsd:complexType name="f15">
+		<xsd:complexContent>
+			<xsd:extension base="f:f14">
+				<xsd:all>
+					<xsd:element name="f16" type="xsd:boolean" nillable="false" />
+				</xsd:all>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="f17">
+		<xsd:complexContent>
+			<xsd:extension base="f:f14">
+				<xsd:all>
+					<xsd:element name="f18" type="xsd:int" nillable="false" />
+				</xsd:all>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="f19">
+		<xsd:complexContent>
+			<xsd:extension base="f:f14">
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="f20">
+	<xsd:all>
+			<xsd:element name="f21" type="f:f1" />
+			<xsd:element name="f22" type="f:f14" />
+	</xsd:all>
+	</xsd:complexType>
+	
+	<xsd:complexType name="f23">
+	<xsd:all>
+			<xsd:element name="f24" type="f:f1"></xsd:element>
+			<!-- Only human-players are sent in lobby -->
+			<xsd:element name="f25" type="f:f6" nillable="true"></xsd:element>
+	</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="f26">
+		<xsd:all>
+			<xsd:element name="f27" type="f:f1"></xsd:element>
+			<!-- Unused and bot seats don't have an user -->
+			<xsd:element name="f28" type="f:f9" nillable="true"></xsd:element>
+			<xsd:element name="f29" type="f:f14"></xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+	
+</xsd:schema>

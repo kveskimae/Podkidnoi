@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	targetNamespace="http://littlech.com/gen/b"
+	xmlns:b="http://littlech.com/gen/b"
+	jxb:version="2.0">
+
+	<xsd:simpleType name="b1">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="b2" />
+			<xsd:enumeration value="b3" />
+			<xsd:enumeration value="b4" />
+			<xsd:enumeration value="b5" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="b6">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="b7" />
+			<xsd:enumeration value="b8" />
+			<xsd:enumeration value="b9" />
+			<xsd:enumeration value="b10" />
+			<xsd:enumeration value="b11" />
+			<xsd:enumeration value="b12" />
+			<xsd:enumeration value="b13" />
+			<xsd:enumeration value="b14" />
+			<xsd:enumeration value="b15" />
+			<xsd:enumeration value="b16" />
+			<xsd:enumeration value="b17" />
+			<xsd:enumeration value="b18" />
+			<xsd:enumeration value="b19" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="b20">
+		<xsd:all>
+			<xsd:element name="b21" type="b:b1" />
+			<xsd:element name="b22" type="b:b6" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="b23">
+		<xsd:all>
+			<xsd:element name="b24" type="b:b20"
+				minOccurs="1" maxOccurs="1" nillable="true" />
+			<xsd:element name="b25" type="b:b20"
+				minOccurs="1" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="b26">
+		<xsd:sequence>
+			<xsd:element name="b27" type="b:b20"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="b28">
+		<xsd:sequence>
+			<xsd:element name="b29" type="b:b23"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+<!-- Are these useful? -->
+	<xsd:element name="b30" type = "b:b20" />
+
+	<xsd:element name="b31" type = "b:b23" />
+	
+	<xsd:element name="b32" type = "b:b26" />
+	
+	<xsd:element name="b33" type = "b:b28" />
+	
+</xsd:schema>

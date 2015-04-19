@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb" targetNamespace="http://littlech.com/gen/e"
+	xmlns:e="http://littlech.com/gen/e" xmlns:c="http://littlech.com/gen/c"
+	xmlns:f="http://littlech.com/gen/f" xmlns:a="http://littlech.com/gen/a"
+	xmlns:b="http://littlech.com/gen/b" xmlns:g="http://littlech.com/gen/g"
+	jxb:version="2.0">
+	<xsd:import namespace="http://littlech.com/gen/f"
+		schemaLocation="f.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/a"
+		schemaLocation="a.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/b"
+		schemaLocation="b.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/g"
+		schemaLocation="g.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/c"
+		schemaLocation="c.xsd" />
+
+	<!-- ENUMERATIONS -->
+
+	<xsd:simpleType name="e1">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="e2" />
+			<xsd:enumeration value="e3" />
+			<xsd:enumeration value="e4" />
+			<xsd:enumeration value="e5" />
+			<xsd:enumeration value="e6" />
+			<!-- for player a response -->
+			<xsd:enumeration value="e7" />
+			<xsd:enumeration value="e8" />
+			<xsd:enumeration value="e9" />
+			<xsd:enumeration value="e10" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="e11">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="e12" />
+			<xsd:enumeration value="e13" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- SUPPORTING DATA TYPES -->
+
+	<xsd:complexType name="e14">
+		<xsd:all>
+			<xsd:element name="e15" type="xsd:int" minOccurs="1"
+				maxOccurs="1" nillable="true" />
+			<xsd:element name="e16" type="b:b20" minOccurs="1"
+				maxOccurs="1" nillable="true" />
+			<xsd:element name="e17" type="b:b26"
+				minOccurs="1" maxOccurs="1" nillable="true" />
+			<xsd:element name="e18" type="b:b28"
+				minOccurs="1" maxOccurs="1" nillable="true" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<!-- SC BASE -->
+
+	<xsd:complexType name="e19">
+		<xsd:complexContent>
+			<xsd:extension base="c:c12">
+				<xsd:sequence>
+					<xsd:element name="e20" type="e:e24"
+						nillable="true" />
+					<xsd:element name="e21" type="e:e11" />
+					<xsd:element name="e22" type="xsd:string"
+						nillable="true" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element name="e23" type="e:e19" />
+
+	<!-- SC ABSTRACT CONTENT -->
+
+	<xsd:complexType name="e24" />
+	
+	<!-- TABLE CREATION -->
+
+	<xsd:complexType name="e25">
+		<xsd:complexContent>
+			<xsd:extension base="e:e24">
+				<xsd:sequence>
+					<xsd:element name="e26" type="g:g4"
+						minOccurs="1" maxOccurs="1" nillable="false" />
+					<xsd:element name="e27" type="xsd:string"
+						minOccurs="1" maxOccurs="1" nillable="true" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- SC ABSTRACT GAME CONTENT -->
+
+	<xsd:complexType name="e28">
+		<xsd:complexContent>
+			<xsd:extension base="e:e24">
+				<xsd:sequence>
+					<xsd:element name="e29" type="e:e1"
+						minOccurs="1" maxOccurs="1" nillable="false" />
+					<xsd:element name="e30" type="a:a12"
+						minOccurs="1" maxOccurs="1" nillable="true" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- SC GAME CONTENT -->
+
+	<xsd:complexType name="e31">
+		<xsd:complexContent>
+			<xsd:extension base="e:e28">
+				<xsd:sequence>
+					<xsd:element name="e32" type="f:f1" />
+					<xsd:element name="e33" type="f:f9" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="e34">
+		<xsd:complexContent>
+			<xsd:extension base="e:e28">
+				<xsd:sequence>
+					<xsd:element name="e35" type="f:f1"
+						minOccurs="1" maxOccurs="1" nillable="false" />
+					<xsd:element name="e36" type="a:a18"
+						minOccurs="1" maxOccurs="1" nillable="false" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="e37">
+		<xsd:complexContent>
+			<xsd:extension base="e:e28">
+				<xsd:sequence>
+					<xsd:element name="e38" type="e:e14"
+						minOccurs="1" maxOccurs="1" nillable="true" />
+					<xsd:element name="e39" type="f:f20"
+						minOccurs="0" maxOccurs="unbounded" nillable="true" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="e40">
+		<xsd:complexContent>
+			<xsd:extension base="e:e28">
+				<xsd:sequence>
+					<xsd:element name="e41" type="g:g1"
+						minOccurs="1" maxOccurs="1" nillable="false" />
+					<xsd:element name="e42" type="e:e14"
+						minOccurs="1" maxOccurs="1" nillable="true" />
+					<xsd:element name="e43" type="f:f26"
+						minOccurs="0" maxOccurs="unbounded" nillable="false" />
+					<xsd:element name="e44" type="f:f1"
+						nillable="true" />
+					<xsd:element name="e45" type="xsd:boolean"
+						nillable="false" />
+					<!-- Super type already contains a request -->
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- SC LOGIN AND LOBBY CONTENT -->
+
+	<xsd:complexType name="e46">
+		<xsd:complexContent>
+			<xsd:extension base="e:e24">
+				<xsd:all>
+					<xsd:element name="e47" type="f:f6" />
+				</xsd:all>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="e48">
+		<xsd:complexContent>
+			<xsd:extension base="e:e24">
+				<xsd:sequence>
+					<xsd:element name="e49" type="g:g30"
+						minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="e50">
+		<xsd:complexContent>
+			<xsd:extension base="e:e24">
+				<xsd:sequence>
+					<xsd:element name="e51" type="g:g30"
+						minOccurs="0" maxOccurs="unbounded" nillable="true" />
+					<xsd:element name="e52" type="g:g16"
+						minOccurs="0" maxOccurs="unbounded" nillable="true" />
+					<xsd:element name="e53" type="g:g36"
+						minOccurs="0" maxOccurs="unbounded" nillable="true" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>

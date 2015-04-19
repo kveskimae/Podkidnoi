@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb" targetNamespace="http://littlech.com/gen/g"
+	xmlns:g="http://littlech.com/gen/g" xmlns:f="http://littlech.com/gen/f"
+	jxb:version="2.0">
+	<xsd:import namespace="http://littlech.com/gen/f"
+		schemaLocation="f.xsd" />
+
+	<xsd:simpleType name="g1">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="g2" />
+			<xsd:enumeration value="g3" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="g4">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="g5" />
+			<xsd:enumeration value="g6" />
+			<xsd:enumeration value="g7" />
+			<xsd:enumeration value="g8" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="g9">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="g10" />
+			<xsd:enumeration value="g11" />
+			<xsd:enumeration value="g12" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="g13">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="g14" />
+			<xsd:enumeration value="g15" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="g16">
+		<xsd:restriction base="xsd:string" />
+	</xsd:simpleType>
+
+	<xsd:complexType name="g17">
+		<xsd:all>
+			<xsd:element name="g18" type="g:g13" />
+			<xsd:element name="g19" type="g:g20" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="g20"
+		abstract="true" />
+
+	<xsd:complexType name="g21">
+		<xsd:complexContent>
+			<xsd:extension base="g:g20">
+				<xsd:all>
+					<xsd:element name="g22" type="xsd:int" />
+					<xsd:element name="g23" type="xsd:boolean" />
+					<xsd:element name="g24" type="xsd:int" />
+					<xsd:element name="g25" type="g:g9" />
+				</xsd:all>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="g26">
+		<xsd:complexContent>
+			<xsd:extension base="g:g20">
+				<xsd:all>
+				</xsd:all>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="g27">
+		<xsd:sequence>
+			<xsd:element name="g28" type="g:g1"
+				minOccurs="1" maxOccurs="1" />
+			<xsd:element name="g29" type="f:f23"
+				minOccurs="0" maxOccurs="unbounded" nillable="true" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="g30">
+		<xsd:all minOccurs="1" maxOccurs="1">
+			<xsd:element name="g31" type="g:g16" />
+			<xsd:element name="g32" type="xsd:string" />
+			<xsd:element name="g33" type="g:g20" />
+			<xsd:element name="g34" type="g:g27" />
+			<xsd:element name="g35" type="xsd:boolean" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="g36">
+		<xsd:sequence>
+			<xsd:element name="g37" type="g:g16" minOccurs="1"
+				maxOccurs="1" />
+			<xsd:element name="g38" type="g:g1"
+				minOccurs="1" maxOccurs="1" nillable="true" />
+			<xsd:element name="g39" type="f:f23"
+				minOccurs="0" maxOccurs="unbounded" nillable="true" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>

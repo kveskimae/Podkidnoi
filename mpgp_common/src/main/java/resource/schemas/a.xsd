@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	targetNamespace="http://littlech.com/gen/a"
+	xmlns:a="http://littlech.com/gen/a"
+	xmlns:f="http://littlech.com/gen/f"
+	xmlns:b="http://littlech.com/gen/b"
+	jxb:version="2.0">
+	<xsd:import namespace="http://littlech.com/gen/f"
+		schemaLocation="f.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/b"
+		schemaLocation="b.xsd" />
+
+	<xsd:simpleType name="a1">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="a2" />
+			<xsd:enumeration value="a3" />
+			<xsd:enumeration value="a4" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="a5">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="a6" />
+			<xsd:enumeration value="a7" />
+			<xsd:enumeration value="a8" />
+			<xsd:enumeration value="a9" />
+			<xsd:enumeration value="a10" />
+			<xsd:enumeration value="a11" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="a12" > 
+		<xsd:sequence>
+			<xsd:element name="Type" type="a:a1"
+				minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+ 
+	<xsd:complexType name="a13">
+		<xsd:complexContent>
+			<xsd:extension base="a:a12">
+				<xsd:sequence>
+					<xsd:element name="a14" type="a:a5"
+						minOccurs="0" maxOccurs="2" />
+					<xsd:element name="a15" type="xsd:int" minOccurs="0"
+						maxOccurs="1" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="a16">
+		<xsd:complexContent>
+			<xsd:extension base="a:a12">
+				<xsd:sequence>
+				<xsd:element name="a17" type="f:f1" minOccurs="1" maxOccurs="1" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="a18">
+		<xsd:all>
+			<xsd:element name="a19" type="a:a5"
+				minOccurs="1" maxOccurs="1" />
+			<xsd:element name="a20" type="b:b28"
+				minOccurs="1" maxOccurs="1"  nillable="true"/>
+			<xsd:element name="a21" type="b:b26"
+				minOccurs="1" maxOccurs="1" nillable="true" />
+		</xsd:all>
+	</xsd:complexType>
+
+</xsd:schema>

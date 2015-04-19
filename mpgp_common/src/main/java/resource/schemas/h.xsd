@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb" 
+	targetNamespace="http://littlech.com/gen/h"
+	xmlns:sc="http://littlech.com/gen/e"
+	xmlns:cs="http://littlech.com/gen/d"
+	xmlns:command="http://littlech.com/gen/c"
+	xmlns:seat="http://littlech.com/gen/f"
+	xmlns:action="http://littlech.com/gen/a"
+	xmlns:card="http://littlech.com/gen/b"
+	xmlns:table="http://littlech.com/gen/g"
+	
+	jxb:version="2.0">
+	<xsd:import namespace="http://littlech.com/gen/e"
+		schemaLocation="e.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/d"
+		schemaLocation="d.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/c"
+		schemaLocation="c.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/f"
+		schemaLocation="f.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/a"
+		schemaLocation="a.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/b"
+		schemaLocation="b.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/g"
+		schemaLocation="g.xsd" />
+</xsd:schema>

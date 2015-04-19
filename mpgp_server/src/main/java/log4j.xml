@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+<!-- 
+
+patterns:
+1.
+%d{MM/dd HH:mm:ss} %-5p %30.30c %x - %m\n
+10/08 15:56:01 INFO                   SECURITY  - User has logged in: 'yyyyy'
+2.
+%d %p - %m [%t] %n
+
+sequence:
+renderer
+throwableRenderer
+appender
+plugin
+category OR logger
+root
+categoryFactory OR loggerFactory
+
+ -->
+	<appender name="SECURITY_APPENDER" class="org.apache.log4j.FileAppender">
+		<param name="File" value="${catalina.base}/logs/security.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{MM/dd HH:mm:ss} %-5p - %m\n" />
+		</layout>
+	</appender>
+	
+	<appender name="COMMUNICATION_APPENDER" class="org.apache.log4j.FileAppender">
+		<param name="File" value="${catalina.base}/logs/communication.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{MM/dd HH:mm:ss} %-5p - %m\n" />
+		</layout>
+	</appender>
+	
+	
+	<appender name="GAME_APPENDER" class="org.apache.log4j.FileAppender">
+		<param name="File" value="${catalina.base}/logs/game.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{MM/dd HH:mm:ss} %-5p - %m [%t] %n" />
+		</layout>
+	</appender>
+	
+	<appender name="DB_APPENDER" class="org.apache.log4j.FileAppender">
+		<param name="File" value="${catalina.base}/logs/db.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{MM/dd HH:mm:ss} %-5p - %m\n" />
+		</layout>
+	</appender>
+	
+	<appender name="LOBBY_APPENDER" class="org.apache.log4j.FileAppender">
+		<param name="File" value="${catalina.base}/logs/lobby.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{MM/dd HH:mm:ss} %-5p - %m\n" />
+		</layout>
+	</appender>
+	
+	<appender name="GENERAL_APPENDER" class="org.apache.log4j.FileAppender">
+		<param name="File" value="${catalina.base}/logs/general.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{MM/dd HH:mm:ss} %-5p - %m\n" />
+		</layout>
+	</appender>
+	
+	<logger name="SECURITY" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="SECURITY_APPENDER" />
+	</logger>
+	
+	<logger name="COMMUNICATION" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="COMMUNICATION_APPENDER" />
+	</logger>
+	
+	<logger name="GAME" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="GAME_APPENDER" />
+	</logger>
+	
+	
+	
+	<logger name="GENERAL" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="GENERAL_APPENDER" />
+	</logger>
+	
+	
+	
+	<logger name="LOBBY" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="LOBBY_APPENDER" />
+	</logger>
+	
+	
+	<logger name="DB" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="DB_APPENDER" />
+	</logger>
+	
+	<root>
+		<priority value="info" />
+		<appender-ref ref="GENERAL_APPENDER" />
+	</root>
+
+</log4j:configuration>

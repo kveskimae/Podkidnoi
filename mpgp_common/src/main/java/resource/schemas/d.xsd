@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb" targetNamespace="http://littlech.com/gen/d"
+	xmlns:d="http://littlech.com/gen/d"
+	xmlns:c="http://littlech.com/gen/c" xmlns:f="http://littlech.com/gen/f"
+	xmlns:a="http://littlech.com/gen/a" xmlns:b="http://littlech.com/gen/b"
+	xmlns:g="http://littlech.com/gen/g" jxb:version="2.0">
+	<xsd:import namespace="http://littlech.com/gen/f"
+		schemaLocation="f.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/a"
+		schemaLocation="a.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/b"
+		schemaLocation="b.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/g"
+		schemaLocation="g.xsd" />
+	<xsd:import namespace="http://littlech.com/gen/c"
+		schemaLocation="c.xsd" />
+
+	<!-- ENUMERATIONS -->
+
+	<xsd:simpleType name="d1">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="d2" />
+			<xsd:enumeration value="d3" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- CS BASE -->
+
+	<xsd:complexType name="d4">
+		<xsd:complexContent>
+			<xsd:extension base="c:c12">
+				<xsd:sequence>
+					<xsd:element name="d5" type="d:d7" nillable="true" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="d6" type="d:d4" />
+
+	<!-- CS ABSTRACT CONTENT -->
+
+	<xsd:complexType name="d7" />
+
+	<xsd:complexType name="d8">
+		<xsd:complexContent>
+			<xsd:extension base="d:d7" />
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="d9">
+		<xsd:complexContent>
+			<xsd:extension base="d:d7">
+				<xsd:all>
+					<xsd:element name="d10" type="xsd:string" />
+					<xsd:element name="d11" type="xsd:string" />
+				</xsd:all>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- CS CREATING & JOINING A TABLE -->
+
+	<xsd:complexType name="d12">
+		<xsd:complexContent>
+			<xsd:extension base="d:d7">
+				<xsd:all>
+					<xsd:element name="d13" type="g:g17" />
+					<xsd:element name="d14" type="xsd:string" />
+				</xsd:all>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="d15">
+		<xsd:complexContent>
+			<xsd:extension base="d:d7">
+				<xsd:all>
+					<xsd:element name="d16" type="xsd:string" />
+				</xsd:all>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="d17">
+		<xsd:complexContent>
+			<xsd:extension base="d:d7">
+				<xsd:all>
+					<xsd:element name="d18" type="f:f1" />
+				</xsd:all>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- CS GAME -->
+
+	<xsd:complexType name="d19">
+		<xsd:complexContent>
+			<xsd:extension base="d:d7">
+				<xsd:all>
+					<xsd:element name="d20" type="d:d1" />
+					<xsd:element name="d21" type="d:d22"
+						nillable="true" />
+				</xsd:all>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="d22" />
+
+	<xsd:complexType name="d23">
+		<xsd:complexContent>
+			<xsd:extension base="d:d22" />
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="d24">
+		<xsd:complexContent>
+			<xsd:extension base="d:d22">
+				<xsd:all>
+					<xsd:element name="d25" type="a:a18" />
+				</xsd:all>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>
